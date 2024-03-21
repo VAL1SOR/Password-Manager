@@ -41,6 +41,8 @@ def save_password():
         if (_ not in save):
             save.append(_)
             Label(tab1, text = _, onclick = clipboard.copy(_)).grid(column = 1)
+            w.delete(0, END)
+            w2.delete(0, END)
 
 Button(tab1, text = "Save Password", command = save_password).grid(column = 2, row = 1, padx = 10, pady = 30)
 
